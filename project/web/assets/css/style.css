@@ -1,0 +1,215 @@
+.custom_ubuntu-light {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.custom_ubuntu-regular {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.custom_ubuntu-medium {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.custom_ubuntu-bold {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.custom_ubuntu-light-italic {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.custom_ubuntu-regular-italic {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.custom_ubuntu-medium-italic {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.custom_ubuntu-bold-italic {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.custom_cantata-one-regular {
+  font-family: "Cantata One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Toàn bộ hàng navbar */
+.custom_nav-row {
+    flex-wrap: wrap;
+}
+
+
+/* LOGO */
+.custom_logo {
+    display: block;
+
+    /* Mobile nhỏ thì logo tự nhỏ,
+       màn hình lớn thì lớn dần */
+    width: clamp(4.5rem, 20vw, 8rem);
+
+    height: auto;
+}
+
+
+/* SEARCH */
+.custom_search {
+    /*
+    Đây là phần quan trọng nhất.
+
+    grow = 1  -> được phép lớn lên
+    shrink = 1 -> được phép co lại
+    basis = 0 -> chia không gian còn lại
+    */
+    flex: 1 1 0;
+
+    /* Cho phép form thật sự co nhỏ */
+    min-width: 0;
+}
+
+.custom_search .form-control {
+    width: 100%;
+    min-width: 0;
+
+    /* giữ chiều cao ổn định */
+    height: 2.5rem;
+}
+
+
+
+
+
+/* DESKTOP */
+@media (min-width: 992px) {
+
+    .custom_nav-row {
+        flex-wrap: nowrap;
+    }
+
+    .custom_logo {
+        width: 10rem;
+    }
+
+}
+
+.custom_footer-logo {
+    width: 8rem;
+    height: auto;
+    display: block;
+}
+
+.custom_social-icon {
+    width: 1.1rem;
+    height: 1.1rem;
+    object-fit: contain;
+}
+
+
+/* Hero Section Styles */
+.hero-container {
+    padding-top: 0.5rem;
+    padding-bottom: 3rem;
+}
+
+.hero-card {
+    background-color: #d8d8d8;
+    border-radius: 1.5rem;
+    padding: 5rem 4rem;
+    min-height: 520px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-subtitle {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+}
+
+.hero-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 4.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 2rem;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+
+/* Category Card Grid */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+    max-width: 580px;
+    margin-bottom: 2.25rem;
+}
+
+.category-card {
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    aspect-ratio: 1 / 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #000000;
+    padding: 0.5rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    border: 1px solid rgba(0,0,0,0.02);
+}
+
+.category-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+    color: #000000;
+}
+
+.category-card .bi {
+    font-size: 1.75rem;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+    color: #1a1a1a;
+}
+
+.category-card span {
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-align: center;
+    color: #1a1a1a;
+    white-space: nowrap;
+}
+
+.hero-description {
+    color: #ffffff;
+    font-size: 1rem;
+    max-width: 560px;
+    line-height: 1.5;
+    font-weight: 400;
+    margin-bottom: 0;
+    opacity: 0.95;
+}
