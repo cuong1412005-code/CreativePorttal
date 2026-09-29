@@ -123,93 +123,53 @@
 }
 
 
-/* Hero Section Styles */
-.hero-container {
-    padding-top: 0.5rem;
-    padding-bottom: 3rem;
-}
-
-.hero-card {
-    background-color: #d8d8d8;
-    border-radius: 1.5rem;
-    padding: 5rem 4rem;
-    min-height: 520px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.hero-subtitle {
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    font-weight: 600;
-    font-size: 0.85rem;
-    color: #ffffff;
-    margin-bottom: 0.75rem;
-}
-
-.hero-title {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: 4.25rem;
-    font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 2rem;
-    letter-spacing: -0.02em;
-    line-height: 1.1;
-}
-
-/* Category Card Grid */
-.category-grid {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 12px;
-    max-width: 580px;
-    margin-bottom: 2.25rem;
-}
-
-.category-card {
+/* Article button */
+.custom_btn-articles {
+    width: 292px;
+    max-width: 100%;
+    min-height: 56px;
+    padding: 0.625rem 1.5rem;
+    border: 3px solid #000000;
     background-color: #ffffff;
-    border-radius: 0.75rem;
-    aspect-ratio: 1 / 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
     color: #000000;
-    padding: 0.5rem;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    cursor: pointer;
-    border: 1px solid rgba(0,0,0,0.02);
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 1.2;
 }
 
-.category-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 16px rgba(0,0,0,0.08);
-    color: #000000;
-}
-
-.category-card .bi {
-    font-size: 1.75rem;
-    line-height: 1;
-    margin-bottom: 0.5rem;
-    color: #1a1a1a;
-}
-
-.category-card span {
-    font-size: 0.7rem;
-    font-weight: 500;
-    text-align: center;
-    color: #1a1a1a;
-    white-space: nowrap;
-}
-
-.hero-description {
+.custom_btn-articles:hover,
+.custom_btn-articles:focus-visible,
+.custom_btn-articles:active {
+    border-color: #000000;
+    background-color: #000000;
     color: #ffffff;
-    font-size: 1rem;
-    max-width: 560px;
-    line-height: 1.5;
-    font-weight: 400;
-    margin-bottom: 0;
-    opacity: 0.95;
 }
+
+.custom_btn-articles:focus-visible {
+    outline: 2px solid #000000;
+    outline-offset: 3px;
+    box-shadow: none;
+}
+
+/* Category Card Aspect Ratio & Hover Effect */
+        .category-box {
+            aspect-ratio: 1 / 1;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .category-box:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+        }
+
+        /* Portfolio Image Wrapper Aspect Ratio */
+        .portfolio-img-box {
+            aspect-ratio: 4 / 5;
+            background-color: #e2e2e2;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .portfolio-card:hover .portfolio-img-box {
+            transform: translateY(-4px);
+            box-shadow: 0 0.75rem 1.5rem rgba(0,0,0,0.1) !important;
+        }
